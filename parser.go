@@ -417,6 +417,14 @@ func (p *parser) parseAttributeSelector() (attrSelector, error) {
 		p.i++
 	}
 
+<<<<<<< HEAD
+=======
+	p.skipWhitespace()
+	if p.i >= len(p.s) {
+		return attrSelector{}, errors.New("unexpected EOF in attribute selector")
+	}
+
+>>>>>>> a8d808592956731592f7775c8d091fbac2b3ffb3
 	if p.s[p.i] != ']' {
 		return attrSelector{}, fmt.Errorf("expected ']', found '%c' instead", p.s[p.i])
 	}
